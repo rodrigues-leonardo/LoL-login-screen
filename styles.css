@@ -3,19 +3,25 @@
 }
 
 body {
+    width: 100vw;
+    height: auto;
     background-color: black;
 }
 
 .main {
     width: 100vh;
     height: 100%;
+    
 }
 
 .container {
     width: 95vw;
-    height: 90vh;
+    height: auto;
     display: flex;
-    margin: 50px;
+    margin-left: 90px;
+    margin-top: 35px;
+    min-width: 360px;
+    
 }
 
 .box-registro {
@@ -47,12 +53,16 @@ body {
     
 }
 
+.registro-label {
+    width: 100%;
+    overflow: hidden;
+}
+
 .registro-input {
     width: 100%;
     padding: 10px;
     background-color: #efefef;
     font-family: var(--fonte);
-    text-transform: uppercase;
     font-size: 8px;
     border: none;
 }
@@ -140,6 +150,7 @@ body {
     align-items: center;
     justify-content: center;
     margin-top: 30px;
+    margin-bottom: 30px;
     font-family: var(--fonte);
 }
 
@@ -165,26 +176,30 @@ body {
     display: none;
 }
 
-
-@media (max-width: 400px) {
+@media screen and (min-device-width: 360px) and (max-device-width: 413px){
     .main {
-        width: 100%;
-        height: 100%;
+        width: 100vw;
+        height: 100vh;
     }
 
     .container {
         margin: 0;
-        width: 100vw;
+        width: 100%;
         height: auto;
+        
     }
     
     .box-registro {
         margin: 0;
-        width: 100%;
+        width: 100vw;
     }
     
     .box-img {
         display: none;
+    }
+
+    .registro-titulo {
+        font-size: clamp(20px, 25px, 30px);
     }
 
     .registro-forms {
@@ -192,14 +207,21 @@ body {
         
     }
 
+
+    .registro-icon {
+        padding: 10px 70px;
+    }
+
     .registro-social-midias {
+        flex-direction: column;
         margin-top: 30px;     
         
     }
 
     .registro-input {
         width: 95%;
-        padding: 8px 3px;
+        padding: 10px 3px;
+        font-size: 14px;
     }
 
     .registro-label {
@@ -208,5 +230,66 @@ body {
 
     .icon-seta {
         margin-top: 150px;
+    }
+}
+
+
+@media screen and (min-device-width: 414px) and (max-device-width: 600px){
+    .box-img{
+        display: none;
+    }
+
+    .main{
+        width: 100vw;
+        height: 100vh;
+    }
+
+    .container {
+        width: 100vw;
+        height: auto;
+        margin: 0;
+    }
+
+    .box-registro {
+        width: 100%;
+        height: 100%;
+    }
+
+    .icon-seta {
+        margin-top: 150px;
+    }
+
+    .registro-social-midias {
+        gap: 5%;
+        margin-top: 30px;
+        
+    }
+
+    .registro-input {
+        font-size: 18px;
+    }
+}
+
+
+@media screen and (min-device-width: 1024px) and (max-device-width: 1919px){
+    .container {
+        margin-left: 25px;
+        margin-bottom: 30px;
+    }
+
+    .box-registro {
+        width: 30%;
+    }
+
+    .registro-titulo {
+        font-size: 24px;
+    }
+
+    .registro-input {
+        font-size: 10px;
+    }
+
+    .registro-icon {
+        padding: 5px 20px;
     }
 }
