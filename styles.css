@@ -48,7 +48,7 @@ body {
 }
 
 .registro-input {
-    width: 90%;
+    width: 100%;
     padding: 10px;
     background-color: #efefef;
     font-family: var(--fonte);
@@ -166,4 +166,47 @@ body {
 }
 
 
+@media (max-width: 400px) {
+    .main {
+        width: 100%;
+        height: 100%;
+    }
 
+    .container {
+        margin: 0;
+        width: 100vw;
+        height: auto;
+    }
+    
+    .box-registro {
+        margin: 0;
+        width: 100%;
+    }
+    
+    .box-img {
+        display: none;
+    }
+
+    .registro-forms {
+        width: 80%;
+        
+    }
+
+    .registro-social-midias {
+        margin-top: 30px;     
+        
+    }
+
+    .registro-input {
+        width: 95%;
+        padding: 8px 3px;
+    }
+
+    .registro-label {
+        width: 100%;
+    }
+
+    .icon-seta {
+        margin-top: 150px;
+    }
+}
